@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import styles from './app.scss'; // different import compared to stylesheets
+import styles from './app.scss';
 
 const App = () => (
   <div className={styles.danger}>
