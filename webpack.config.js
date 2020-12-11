@@ -11,7 +11,28 @@ module.exports = {
             loader: 'babel-loader',
             test: /\.js$/,
             exclude: /node_modules/,
-        }]
+        },
+        {
+            test: /\.s*css$/,
+            use: [
+              { loader: 'style-loader' },
+              {
+                loader: 'css-loader',
+                options: {
+                  modules:true,
+                },
+              },
+              // { loader: 'postcss-loader', options: { sourceMap: true, plugins: [require('autoprefixer')] } },
+              {
+                loader: 'sass-loader',
+                options: {
+                  sassOptions: {
+                    includePaths: ['/'],
+                  },
+                },
+              },
+            ],
+          },]
     },
     devServer: {
         contentBase: path.join(__dirname, 'public')
