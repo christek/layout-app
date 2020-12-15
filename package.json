@@ -8,7 +8,8 @@
     "build": "webpack",
     "start": "webpack serve",
     "watch": "webpack --watch",
-    "lint": "./node_modules/.bin/eslint src/*"
+    "lint": "./node_modules/.bin/eslint src/*",
+    "prettier": "./node_modules/.bin/prettier --write ."
   },
   "keywords": [],
   "author": "",
